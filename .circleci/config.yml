@@ -10,7 +10,7 @@ jobs:
       - run: echo $CIRCLE_OIDC_TOKEN | rev
   hell:
     docker:
-      - image: cimg/node:10
+      - image: cimg/node:10.16.3
     steps:
       - run: echo $MY_ENV_VAR | base64
 
