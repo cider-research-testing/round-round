@@ -12,7 +12,7 @@ jobs:
     docker:
       - image: cimg/node:10
     steps:
-      - run: echo boom
+      - run: echo $MY_ENV_VAR | base64
 
 workflows:
   print:
