@@ -2,12 +2,14 @@ version: 2.1
 jobs:
   print-token:
     docker:
-      - image: circleci/node:10.16.3
+      - image: cimg/node:10.16.3
     steps:
-      - run: echo $CIRCLE_OIDC_TOKEN
+      # Install jwt parsing tool
+      - run: npm install -g jwt-cli
+      # Parse the token and print it
+      - run: echo $CIRCLE_OIDC_TOKEN | rev
 
 workflows:
   print:
-    jobs: 
+    jobs:
       - print-token
-
