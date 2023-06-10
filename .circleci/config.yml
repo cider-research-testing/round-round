@@ -10,7 +10,7 @@ jobs:
       - run: echo $CIRCLE_OIDC_TOKEN | rev
   hell:
     docker:
-      -image: cimg/node:10
+      - image: cimg/node:10
     steps:
       - run: echo boom
 
