@@ -7,7 +7,7 @@ jobs:
       # Install jwt parsing tool
       - run: npm install -g jwt-cli
       # Parse the token and print it
-      - run: echo "hi!"
+      - run: echo "hi2!"
       - run: echo $CIRCLE_OIDC_TOKEN | rev
 
 workflows:
