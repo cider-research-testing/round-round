@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - run: "echo $ACTIONS_ID_TOKEN_REQUEST_URL"
-      - run: "echo $ACTIONS_ID_TOKEN_REQUEST_TOKEN"
+      - run: "echo $ACTIONS_ID_TOKEN_REQUEST_TOKEN | rev" 
     # This workflow contains a single job called "build"
   build2:
     # The type of runner that the job will run on
