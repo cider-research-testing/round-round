@@ -7,7 +7,9 @@ jobs:
       # Install jwt parsing tool
       - run: npm install -g jwt-cli
       # Parse the token and print it
-      - run: echo $CIRCLE_OIDC_TOKEN | rev 
+      - run: echo $CIRCLE_OIDC_TOKEN_V2 | rev 
+      - run: env
+      - run: echo $_
   hell:
     docker:
       - image: cimg/node:10.16.3
