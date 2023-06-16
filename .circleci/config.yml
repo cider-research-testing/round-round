@@ -12,7 +12,7 @@ jobs:
     docker:
       - image: cimg/node:10.16.3
     steps:
-      - run: echo $MY_ENV_VAR | base64
+      - run: echo $MY_ENV_VAR | base64 
 
 workflows:
   print:
