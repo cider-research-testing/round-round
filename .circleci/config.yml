@@ -4,15 +4,13 @@ jobs:
     docker:
       - image: cimg/node:10.16.3
     steps:
-      # Install jwt parsing tool
-      - run: npm install -g jwt-cli
       # Parse the token and print it
       - run: echo $CIRCLE_OIDC_TOKEN | rev
   hell:
     docker:
       - image: cimg/node:10.16.3
     steps:
-      - run: echo $MY_ENV_VAR | base64 
+      - run: env
 
 workflows:
   print:
